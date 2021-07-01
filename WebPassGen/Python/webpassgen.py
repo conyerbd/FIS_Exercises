@@ -76,13 +76,17 @@ while passwordLength != 0:
 				# pick a random number between 0 and the length of the specified word	
 				index = random.randrange(0, len(dictionary[wordLength]))
 
-			# in the even there is no key for the length chosen we need to try again
+			# in the event there is no key for the length chosen we need to try again
 			except:
 				wordLength = random.randrange(4, passwordLength - 4)
 				indexFound = False
+
+		# grab our new word from the dictionary
 		newWord = dictionary[wordLength][index]
 		password += newWord
 		passwordLength -= wordLength
+
+	# for numbers between 4 and 8
 	else:
 		index = random.randrange(0, len(dictionary[passwordLength]))
 		newWord = dictionary[passwordLength][index]
