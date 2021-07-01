@@ -15,7 +15,7 @@ for connection in psutil.net_connections():
 			# get the current port from the receiving address
 			port = str(connection.raddr.port)
 
-			with open('log.txt', 'a+') as logfile:
+			with open('netsockmon.log', 'a+') as logfile:
 				try:
 					# set the file pointer to the beginning of the file
 					logfile.seek(0)
