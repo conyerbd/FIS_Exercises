@@ -19,7 +19,7 @@ if passwordLength < 8:
 	print("Input must be a whole number greater than or equal to 8...")
 	exit()
 
-URL = "https://en.wikipedia.org/wiki/Rome"
+URL = "https://www.microcenter.com"
 
 # get the html of the site
 request = requests.get(URL)
@@ -88,7 +88,7 @@ while passwordLength != 0:
 
 	# for numbers between 4 and 8
 	else:
-		index = random.randrange(0, len(dictionary[passwordLength]))
+		index = random.randrange(0, passwordLength)
 		newWord = dictionary[passwordLength][index]
 		password += newWord
 		passwordLength -= passwordLength
